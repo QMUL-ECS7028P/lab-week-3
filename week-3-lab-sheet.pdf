@@ -1,0 +1,922 @@
+%PDF-1.3
+1 0 obj
+<< /Type /Catalog
+/Outlines 2 0 R
+/Pages 3 0 R >>
+endobj
+2 0 obj
+<< /Type /Outlines /Count 0 >>
+endobj
+3 0 obj
+<< /Type /Pages
+/Kids [6 0 R
+27 0 R
+34 0 R
+42 0 R
+44 0 R
+48 0 R
+]
+/Count 6
+/Resources <<
+/ProcSet 4 0 R
+/Font << 
+/F1 8 0 R
+/F2 9 0 R
+/F3 10 0 R
+/F4 29 0 R
+>>
+>>
+/MediaBox [0.000 0.000 595.280 841.890]
+ >>
+endobj
+4 0 obj
+[/PDF /Text ]
+endobj
+5 0 obj
+<<
+/Creator (DOMPDF)
+/CreationDate (D:20220209125252+00'00')
+/ModDate (D:20220209125252+00'00')
+>>
+endobj
+6 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Annots [ 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R 21 0 R 23 0 R 25 0 R ]
+/Contents 7 0 R
+>>
+endobj
+7 0 obj
+<<
+/Length 5121 >>
+stream
+
+0.000 0.000 0.000 rg
+BT 34.016 768.985 Td /F1 24.0 Tf  [(Introduction to Python and RDFlib)] TJ ET
+BT 64.016 723.797 Td /F1 12.0 Tf  [(Session objectives:)] TJ ET
+BT 159.008 723.797 Td /F2 12.0 Tf  [( - Become familiar with using Python to create simple Semantic Web )] TJ ET
+BT 64.016 709.541 Td /F2 12.0 Tf  [(programs. - Learn how to use RDFlib to load and manipulate RDF graphs.)] TJ ET
+BT 34.016 662.643 Td /F1 18.0 Tf  [(1. Introduction)] TJ ET
+BT 34.016 632.021 Td /F2 12.0 Tf  [(In this lab we'll be using Python to develop simple scripts that access, query, and manipulate RDF semantic )] TJ ET
+BT 34.016 617.765 Td /F2 12.0 Tf  [(data.)] TJ ET
+BT 34.016 591.509 Td /F2 12.0 Tf  [(If you're new to Python it would be wise to keep the basic tutorial handy for reference: - )] TJ ET
+0.000 0.000 0.800 rg
+BT 34.016 577.253 Td /F2 12.0 Tf  [(https://docs.python.org/3.7/tutorial/)] TJ ET
+0.000 0.000 0.800 RG
+0.6 w 0 J [  ] 0 d
+34.016 574.553 m 204.368 574.553 l S
+0.000 0.000 0.000 rg
+BT 204.368 577.253 Td /F2 12.0 Tf  [(.)] TJ ET
+BT 34.016 550.997 Td /F2 12.0 Tf  [(Python scripts are run by calling the )] TJ ET
+BT 210.332 550.997 Td /F3 12.0 Tf  [(python)] TJ ET
+BT 253.532 550.997 Td /F2 12.0 Tf  [( command, followed by the name of the python script to )] TJ ET
+BT 34.016 536.741 Td /F2 12.0 Tf  [(execute, for example:)] TJ ET
+BT 34.016 511.930 Td /F3 12.0 Tf  [(python hello_world.py)] TJ ET
+BT 34.016 486.035 Td /F2 12.0 Tf  [(It is also possible to run python in an interactive mode known as a REPL, to do this simply call )] TJ ET
+BT 493.676 486.035 Td /F3 12.0 Tf  [(python)] TJ ET
+BT 34.016 471.779 Td /F2 12.0 Tf  [(without any arguments:)] TJ ET
+BT 34.016 446.968 Td /F3 12.0 Tf  [(python)] TJ ET
+BT 34.016 421.073 Td /F2 12.0 Tf  [(If you are using one of the machines in the ITL, you will be able to follow along with this lab sheet with )] TJ ET
+BT 34.016 406.817 Td /F2 12.0 Tf  [(minimal fuss. Make sure you boot into )] TJ ET
+BT 222.680 406.817 Td /F1 12.0 Tf  [(Linux)] TJ ET
+BT 253.364 406.817 Td /F2 12.0 Tf  [( and not Windows. If you would like to use your own )] TJ ET
+BT 34.016 392.561 Td /F2 12.0 Tf  [(computer, you'll need to make sure you have python installed as well as the following additional libraries: - )] TJ ET
+BT 34.016 378.305 Td /F2 12.0 Tf  [(sparql-wrapper: )] TJ ET
+0.000 0.000 0.800 rg
+BT 112.988 378.305 Td /F2 12.0 Tf  [(https://github.com/RDFLib/sparqlwrapper)] TJ ET
+0.6 w 0 J [  ] 0 d
+112.988 375.605 m 315.992 375.605 l S
+0.000 0.000 0.000 rg
+BT 315.992 378.305 Td /F2 12.0 Tf  [( - rdflib: )] TJ ET
+0.000 0.000 0.800 rg
+BT 358.988 378.305 Td /F2 12.0 Tf  [(https://github.com/RDFLib/rdflib)] TJ ET
+0.6 w 0 J [  ] 0 d
+358.988 375.605 m 520.016 375.605 l S
+0.000 0.000 0.000 rg
+BT 520.016 378.305 Td /F2 12.0 Tf  [( - )] TJ ET
+BT 34.016 364.049 Td /F2 12.0 Tf  [(pyparsing: )] TJ ET
+0.000 0.000 0.800 rg
+BT 87.680 364.049 Td /F2 12.0 Tf  [(http://pyparsing.wikispaces.com/)] TJ ET
+0.6 w 0 J [  ] 0 d
+87.680 361.349 m 246.344 361.349 l S
+0.000 0.000 0.000 rg
+BT 246.344 364.049 Td /F2 12.0 Tf  [( - networkx: )] TJ ET
+0.000 0.000 0.800 rg
+BT 308.000 364.049 Td /F2 12.0 Tf  [(http://networkx.lanl.gov/)] TJ ET
+0.6 w 0 J [  ] 0 d
+308.000 361.349 m 427.340 361.349 l S
+0.000 0.000 0.000 rg
+BT 34.016 337.793 Td /F2 12.0 Tf  [(To run the interactive notebooks, you will also need to install Jupyter: )] TJ ET
+0.000 0.000 0.800 rg
+BT 372.992 337.793 Td /F2 12.0 Tf  [(https://jupyter.org/)] TJ ET
+0.6 w 0 J [  ] 0 d
+372.992 335.093 m 462.668 335.093 l S
+0.000 0.000 0.000 rg
+BT 34.016 302.895 Td /F1 18.0 Tf  [(2. The RDFLib Graph)] TJ ET
+BT 34.016 272.273 Td /F2 12.0 Tf  [(We'll be working with the serialised RDF graph file )] TJ ET
+BT 285.812 272.273 Td /F3 12.0 Tf  [(shakespeare.n3)] TJ ET
+BT 386.612 272.273 Td /F2 12.0 Tf  [(. If it was not included with this )] TJ ET
+BT 34.016 258.017 Td /F2 12.0 Tf  [(document, you can download it yourself from: )] TJ ET
+0.000 0.000 0.800 rg
+BT 259.988 258.017 Td /F2 12.0 Tf  [(https://raw.githubusercontent.com/QMUL-ECS735P/lab-)] TJ ET
+0.6 w 0 J [  ] 0 d
+259.988 255.317 m 535.316 255.317 l S
+BT 34.016 243.761 Td /F2 12.0 Tf  [(week-3/master/shakespeare.n3)] TJ ET
+0.6 w 0 J [  ] 0 d
+34.016 241.061 m 180.968 241.061 l S
+0.000 0.000 0.000 rg
+BT 34.016 217.505 Td /F2 12.0 Tf  [(Open the file in a text editor and identify each RDF triple; how many are there? Have a look at both the )] TJ ET
+BT 34.016 203.249 Td /F2 12.0 Tf  [(prefixes and the defined triples. How many different concepts are defined in this RDF graph? How many )] TJ ET
+BT 34.016 188.993 Td /F2 12.0 Tf  [(properties?)] TJ ET
+BT 34.016 162.737 Td /F2 12.0 Tf  [(Before we can run python on the ITL machines, we need to set up the python environment by entering the )] TJ ET
+BT 34.016 148.481 Td /F2 12.0 Tf  [(following in the terminal:)] TJ ET
+BT 34.016 123.670 Td /F3 12.0 Tf  [(module load python/3.6.6)] TJ ET
+BT 34.016 97.775 Td /F2 12.0 Tf  [(This step as crucial to ensure the machines load the correct version of python and the libraries we depend on. )] TJ ET
+BT 34.016 83.519 Td /F2 12.0 Tf  [(You will have to do this every week!)] TJ ET
+endstream
+endobj
+8 0 obj
+<< /Type /Font
+/Subtype /Type1
+/Name /F1
+/BaseFont /Times-Bold
+/Encoding /WinAnsiEncoding
+>>
+endobj
+9 0 obj
+<< /Type /Font
+/Subtype /Type1
+/Name /F2
+/BaseFont /Times-Roman
+/Encoding /WinAnsiEncoding
+>>
+endobj
+10 0 obj
+<< /Type /Font
+/Subtype /Type1
+/Name /F3
+/BaseFont /Courier
+/Encoding /WinAnsiEncoding
+>>
+endobj
+11 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 12 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 34.0157 576.1735 204.3677 588.0535 ]
+>>
+endobj
+12 0 obj
+<< /Type /Action
+/S /URI
+/URI (https://docs.python.org/3.7/tutorial/)
+>>
+endobj
+13 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 14 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 112.9877 377.2250 315.9917 389.1050 ]
+>>
+endobj
+14 0 obj
+<< /Type /Action
+/S /URI
+/URI (https://github.com/RDFLib/sparqlwrapper)
+>>
+endobj
+15 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 16 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 358.9877 377.2250 520.0157 389.1050 ]
+>>
+endobj
+16 0 obj
+<< /Type /Action
+/S /URI
+/URI (https://github.com/RDFLib/rdflib)
+>>
+endobj
+17 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 18 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 87.6797 362.9690 246.3437 374.8490 ]
+>>
+endobj
+18 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://pyparsing.wikispaces.com/)
+>>
+endobj
+19 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 20 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 307.9997 362.9690 427.3397 374.8490 ]
+>>
+endobj
+20 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://networkx.lanl.gov/)
+>>
+endobj
+21 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 22 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 372.9917 336.7130 462.6677 348.5930 ]
+>>
+endobj
+22 0 obj
+<< /Type /Action
+/S /URI
+/URI (https://jupyter.org/)
+>>
+endobj
+23 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 24 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 259.9877 256.9370 535.3157 268.8170 ]
+>>
+endobj
+24 0 obj
+<< /Type /Action
+/S /URI
+/URI (https://raw.githubusercontent.com/QMUL-ECS735P/lab-week-3/master/shakespeare.n3)
+>>
+endobj
+25 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 26 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 34.0157 242.6810 180.9677 254.5610 ]
+>>
+endobj
+26 0 obj
+<< /Type /Action
+/S /URI
+/URI (https://raw.githubusercontent.com/QMUL-ECS735P/lab-week-3/master/shakespeare.n3)
+>>
+endobj
+27 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Annots [ 30 0 R 32 0 R ]
+/Contents 28 0 R
+>>
+endobj
+28 0 obj
+<<
+/Length 5362 >>
+stream
+
+0.000 0.000 0.000 rg
+0.000 0.000 0.800 RG
+0.6 w 0 J [  ] 0 d
+BT 34.016 784.469 Td /F2 12.0 Tf  [(If you type now )] TJ ET
+BT 113.336 784.469 Td /F3 12.0 Tf  [(python)] TJ ET
+BT 156.536 784.469 Td /F2 12.0 Tf  [( in the terminal you should see the following output:)] TJ ET
+BT 34.016 759.658 Td /F3 12.0 Tf  [(bash-4.2$ python)] TJ ET
+BT 34.016 747.208 Td /F3 12.0 Tf  [(Python 3.6.6 \(default, Sep  3 2018, 15:31:46\))] TJ ET
+BT 34.016 734.758 Td /F3 12.0 Tf  [([GCC 4.8.5 20150623 \(Red Hat 4.8.5-28\)] on linux)] TJ ET
+BT 34.016 722.307 Td /F3 12.0 Tf  [(Type "help", "copyright", "credits" or "license" for more information.)] TJ ET
+BT 34.016 709.857 Td /F3 12.0 Tf  [(>>>)] TJ ET
+BT 34.016 683.962 Td /F2 12.0 Tf  [(Take a moment to familiarse yourself with python and the interactive shell by running some of the )] TJ ET
+BT 34.016 669.706 Td /F2 12.0 Tf  [(commands details here: )] TJ ET
+0.000 0.000 0.800 rg
+BT 150.332 669.706 Td /F2 12.0 Tf  [(https://docs.python.org/3/tutorial/introduction.html#using-python-as-a-calculator)] TJ ET
+0.6 w 0 J [  ] 0 d
+150.332 667.006 m 539.324 667.006 l S
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+34.016 654.855 m 561.264 654.855 l 560.514 654.105 l 34.766 654.105 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+34.016 653.355 m 561.264 653.355 l 560.514 654.105 l 34.766 654.105 l  f
+561.264 654.855 m 561.264 653.355 l 560.514 654.105 l 560.514 654.105 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+34.016 654.855 m 34.016 653.355 l 34.766 654.105 l 34.766 654.105 l  f
+BT 34.016 629.950 Td /F2 12.0 Tf  [(Before using functions and classes from RDFlib, we need to add some import declarations. Evaluate the )] TJ ET
+BT 34.016 615.694 Td /F2 12.0 Tf  [(following code line-by-line:)] TJ ET
+BT 34.016 590.883 Td /F3 12.0 Tf  [(from __future__ import print_function, unicode_literals)] TJ ET
+BT 34.016 578.433 Td /F3 12.0 Tf  [(import warnings)] TJ ET
+BT 34.016 565.982 Td /F3 12.0 Tf  [(warnings.filterwarnings\('ignore'\))] TJ ET
+BT 34.016 541.532 Td /F3 12.0 Tf  [(import rdflib)] TJ ET
+BT 34.016 529.082 Td /F3 12.0 Tf  [(from rdflib.graph import Graph, Store, URIRef, BNode, Literal)] TJ ET
+BT 34.016 516.632 Td /F3 12.0 Tf  [(from rdflib.namespace import Namespace, RDF, RDFS)] TJ ET
+BT 34.016 504.181 Td /F3 12.0 Tf  [(from rdflib import plugin)] TJ ET
+BT 34.016 478.287 Td /F2 12.0 Tf  [(The Graph class in RDFlib represents a set of triples. We're going to create a new Graph and populate it with )] TJ ET
+BT 34.016 464.031 Td /F2 12.0 Tf  [(the definitions in )] TJ ET
+BT 118.352 464.031 Td /F3 12.0 Tf  [(shakespeare.n3)] TJ ET
+BT 219.152 464.031 Td /F2 12.0 Tf  [(.)] TJ ET
+BT 34.016 439.219 Td /F3 12.0 Tf  [(g = Graph\(\))] TJ ET
+BT 34.016 426.769 Td /F3 12.0 Tf  [(g.parse\('shakespeare.n3', format = 'n3'\))] TJ ET
+BT 34.016 400.874 Td /F2 12.0 Tf  [(If )] TJ ET
+BT 45.008 400.874 Td /F3 12.0 Tf  [(shakespeare.n3)] TJ ET
+BT 145.808 400.874 Td /F2 12.0 Tf  [( is saved in a different folder, make sure you write the correct path to the file. We can )] TJ ET
+BT 34.016 386.618 Td /F2 12.0 Tf  [(also create the graph by fetching the data directly from the internet:)] TJ ET
+BT 34.016 361.807 Td /F3 12.0 Tf  [(g.parse\('https://raw.githubusercontent.com/QMUL-ECS735P/lab-week-3/master/shakespeare.n3', format = 'n3'\))] TJ ET
+BT 34.016 335.912 Td /F2 12.0 Tf  [(The RDF graph is now loaded in memory. We can check the number of statements using the )] TJ ET
+BT 481.280 335.912 Td /F3 12.0 Tf  [(len)] TJ ET
+BT 502.880 335.912 Td /F2 12.0 Tf  [( function:)] TJ ET
+BT 34.016 311.100 Td /F3 12.0 Tf  [(len\(g\))] TJ ET
+BT 34.016 285.206 Td /F2 12.0 Tf  [(Or an internal representation of the object using )] TJ ET
+BT 266.636 285.206 Td /F3 12.0 Tf  [(repr)] TJ ET
+BT 295.436 285.206 Td /F2 12.0 Tf  [(:)] TJ ET
+BT 34.016 260.394 Td /F3 12.0 Tf  [(repr\(g\))] TJ ET
+BT 34.016 234.499 Td /F2 12.0 Tf  [(Now, use a )] TJ ET
+BT 90.668 234.499 Td /F3 12.0 Tf  [(for)] TJ ET
+BT 112.268 234.499 Td /F2 12.0 Tf  [( loop to iterate through the contents of the graph \(you can find the documentation for loops )] TJ ET
+BT 34.016 220.243 Td /F2 12.0 Tf  [(here: )] TJ ET
+0.000 0.000 0.800 rg
+BT 61.004 220.243 Td /F2 12.0 Tf  [(http://docs.python.org/tutorial/controlflow.html#for-statements)] TJ ET
+0.000 0.000 0.800 RG
+0.6 w 0 J [  ] 0 d
+61.004 217.543 m 364.004 217.543 l S
+0.000 0.000 0.000 rg
+BT 364.004 220.243 Td /F2 12.0 Tf  [(\). For now we'll just print each )] TJ ET
+BT 34.016 205.987 Td /F2 12.0 Tf  [(statement out.)] TJ ET
+BT 64.016 167.731 Td /F2 12.0 Tf  [(Python is whitespace sensitive! We don't use )] TJ ET
+BT 282.488 167.731 Td /F3 12.0 Tf  [({ ... })] TJ ET
+BT 332.888 167.731 Td /F2 12.0 Tf  [( to denote blocks of code, instead we )] TJ ET
+BT 64.016 153.475 Td /F2 12.0 Tf  [(use indentation such as spaces or tabs.)] TJ ET
+BT 34.016 116.664 Td /F3 12.0 Tf  [(for st in g:)] TJ ET
+BT 34.016 104.214 Td /F3 12.0 Tf  [(  print\(st\))] TJ ET
+BT 34.016 78.319 Td /F2 12.0 Tf  [(We can also use )] TJ ET
+BT 114.656 78.319 Td /F4 12.0 Tf  [(destructuring)] TJ ET
+BT 179.324 78.319 Td /F2 12.0 Tf  [( to unpack the subject, predicate, and object automatically in the loop:)] TJ ET
+BT 34.016 53.507 Td /F3 12.0 Tf  [(for s, p, o in g:)] TJ ET
+BT 34.016 41.057 Td /F3 12.0 Tf  [(  print\("subject: " + str\(s\)\))] TJ ET
+BT 34.016 28.607 Td /F3 12.0 Tf  [(  print\("predicate: " + str\(p\)\))] TJ ET
+endstream
+endobj
+29 0 obj
+<< /Type /Font
+/Subtype /Type1
+/Name /F4
+/BaseFont /Times-Italic
+/Encoding /WinAnsiEncoding
+>>
+endobj
+30 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 31 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 150.3317 668.6263 539.3237 680.5063 ]
+>>
+endobj
+31 0 obj
+<< /Type /Action
+/S /URI
+/URI (https://docs.python.org/3/tutorial/introduction.html#using-python-as-a-calculator)
+>>
+endobj
+32 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 33 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 61.0037 219.1634 364.0037 231.0434 ]
+>>
+endobj
+33 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://docs.python.org/tutorial/controlflow.html#for-statements)
+>>
+endobj
+34 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Annots [ 36 0 R 38 0 R 40 0 R ]
+/Contents 35 0 R
+>>
+endobj
+35 0 obj
+<<
+/Length 5398 >>
+stream
+
+0.000 0.000 0.000 rg
+0.000 0.000 0.800 RG
+0.6 w 0 J [  ] 0 d
+BT 34.016 797.914 Td /F3 12.0 Tf  [(  print\("object is: " + str\(o\)\))] TJ ET
+BT 34.016 772.019 Td /F2 12.0 Tf  [(The actual elements in the triples are Python classes that represent URIRefs, blank nodes, and literals. Write )] TJ ET
+BT 34.016 757.763 Td /F2 12.0 Tf  [(a loop that uses the )] TJ ET
+BT 129.008 757.763 Td /F3 12.0 Tf  [(type)] TJ ET
+BT 157.808 757.763 Td /F2 12.0 Tf  [( function to print the type of each variable such as )] TJ ET
+BT 400.760 757.763 Td /F3 12.0 Tf  [(type\(s\))] TJ ET
+BT 451.160 757.763 Td /F2 12.0 Tf  [(.)] TJ ET
+BT 34.016 731.507 Td /F2 12.0 Tf  [(You can read more about the Graph class here: )] TJ ET
+0.000 0.000 0.800 rg
+BT 262.280 731.507 Td /F2 12.0 Tf  [(https://rdflib.readthedocs.io/en/6.1.1/intro_to_graphs.html)] TJ ET
+0.6 w 0 J [  ] 0 d
+262.280 728.807 m 541.280 728.807 l S
+0.000 0.000 0.000 rg
+BT 34.016 696.609 Td /F1 18.0 Tf  [(3. Serialisation)] TJ ET
+BT 34.016 665.987 Td /F2 12.0 Tf  [(With our shakespeare graph still stored in the )] TJ ET
+BT 254.648 665.987 Td /F3 12.0 Tf  [(g)] TJ ET
+BT 261.848 665.987 Td /F2 12.0 Tf  [( variable, we can use the )] TJ ET
+BT 382.808 665.987 Td /F3 12.0 Tf  [(serialize)] TJ ET
+BT 447.608 665.987 Td /F2 12.0 Tf  [( method to see what )] TJ ET
+BT 34.016 651.731 Td /F2 12.0 Tf  [(the graph looks like in different formats:)] TJ ET
+BT 34.016 626.920 Td /F3 12.0 Tf  [(print\(g.serialize\(format = 'nt'\)\))] TJ ET
+BT 34.016 614.470 Td /F3 12.0 Tf  [(print\(g.serialize\(format = 'turtle'\)\))] TJ ET
+BT 34.016 602.019 Td /F3 12.0 Tf  [(print\(g.serialize\(format = 'xml'\)\))] TJ ET
+BT 34.016 576.124 Td /F2 12.0 Tf  [(Compare each format, note how the )] TJ ET
+BT 208.976 576.124 Td /F3 12.0 Tf  [(turtle)] TJ ET
+BT 252.176 576.124 Td /F2 12.0 Tf  [( format is much less verbose than N-triples \()] TJ ET
+BT 465.476 576.124 Td /F3 12.0 Tf  [(nt)] TJ ET
+BT 479.876 576.124 Td /F2 12.0 Tf  [(\) or )] TJ ET
+BT 499.868 576.124 Td /F3 12.0 Tf  [(xml)] TJ ET
+BT 521.468 576.124 Td /F2 12.0 Tf  [(. Read )] TJ ET
+BT 34.016 561.868 Td /F2 12.0 Tf  [(up how to save files using python and save each serialisation to a new file such as )] TJ ET
+BT 429.620 561.868 Td /F3 12.0 Tf  [(shakespeare.xml)] TJ ET
+BT 537.620 561.868 Td /F2 12.0 Tf  [(. )] TJ ET
+BT 34.016 547.612 Td /F2 12.0 Tf  [(Here is a good place to start: )] TJ ET
+0.000 0.000 0.800 rg
+BT 174.320 547.612 Td /F2 12.0 Tf  [(https://www.w3schools.com/python/python_file_write.asp)] TJ ET
+0.6 w 0 J [  ] 0 d
+174.320 544.912 m 455.984 544.912 l S
+0.000 0.000 0.000 rg
+BT 34.016 512.714 Td /F1 18.0 Tf  [(4. The RDF Store)] TJ ET
+BT 34.016 482.092 Td /F2 12.0 Tf  [(For this part of the lab, we'll be using RDFlib to create an RDF Store. Stores allow us to persist our graphs in )] TJ ET
+BT 34.016 467.836 Td /F2 12.0 Tf  [(muliple ways such as a SQL database. For simplicity, we'll be using an in-memory store: in your own time )] TJ ET
+BT 34.016 453.580 Td /F2 12.0 Tf  [(you might be interested in exploring how to use MySQL, SQLite, or Sleepycat.)] TJ ET
+BT 34.016 427.324 Td /F2 12.0 Tf  [(We'll create some example RDF data to manipulate with. For reference, you can find that example data here: )] TJ ET
+0.000 0.000 0.800 rg
+BT 34.016 413.068 Td /F2 12.0 Tf  [(https://www.w3schools.com/xml/xml_rdf.asp)] TJ ET
+0.6 w 0 J [  ] 0 d
+34.016 410.368 m 253.688 410.368 l S
+0.000 0.000 0.000 rg
+BT 253.688 413.068 Td /F2 12.0 Tf  [(.)] TJ ET
+BT 34.016 388.257 Td /F3 12.0 Tf  [(rdf_xml_data = '''<?xml version="1.0"?>)] TJ ET
+BT 34.016 375.807 Td /F3 12.0 Tf  [(<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cd="http://www.recshop.fake/cd#">)] TJ ET
+BT 34.016 363.357 Td /F3 12.0 Tf  [(<rdf:Description)] TJ ET
+BT 34.016 350.906 Td /F3 12.0 Tf  [(rdf:about="http://www.recshop.fake/cd/Empire_Burlesque">)] TJ ET
+BT 34.016 338.456 Td /F3 12.0 Tf  [(  <cd:artist>Bob_Dylan</cd:artist>)] TJ ET
+BT 34.016 326.006 Td /F3 12.0 Tf  [(  <cd:country>USA</cd:country>)] TJ ET
+BT 34.016 313.556 Td /F3 12.0 Tf  [(  <cd:company>Columbia</cd:company>)] TJ ET
+BT 34.016 301.105 Td /F3 12.0 Tf  [(  <cd:price>10.90</cd:price>)] TJ ET
+BT 34.016 288.655 Td /F3 12.0 Tf  [(  <cd:year>1985</cd:year>)] TJ ET
+BT 34.016 276.205 Td /F3 12.0 Tf  [(</rdf:Description>)] TJ ET
+BT 34.016 263.755 Td /F3 12.0 Tf  [(<rdf:Description)] TJ ET
+BT 34.016 251.304 Td /F3 12.0 Tf  [(rdf:about="http://www.recshop.fake/cd/Hide_your_heart">)] TJ ET
+BT 34.016 238.854 Td /F3 12.0 Tf  [(  <cd:artist>Bonnie_Tyler</cd:artist>)] TJ ET
+BT 34.016 226.404 Td /F3 12.0 Tf  [(  <cd:country>UK</cd:country>)] TJ ET
+BT 34.016 213.954 Td /F3 12.0 Tf  [(  <cd:company>CBS_Records</cd:company>)] TJ ET
+BT 34.016 201.503 Td /F3 12.0 Tf  [(  <cd:price>9.90</cd:price>)] TJ ET
+BT 34.016 189.053 Td /F3 12.0 Tf  [(  <cd:year>1988</cd:year>)] TJ ET
+BT 34.016 176.603 Td /F3 12.0 Tf  [(</rdf:Description>)] TJ ET
+BT 34.016 164.153 Td /F3 12.0 Tf  [(</rdf:RDF>)] TJ ET
+BT 34.016 151.703 Td /F3 12.0 Tf  [(''')] TJ ET
+BT 34.016 125.808 Td /F2 12.0 Tf  [(The three apostrophes \()] TJ ET
+BT 146.984 125.808 Td /F3 12.0 Tf  [(''')] TJ ET
+BT 168.584 125.808 Td /F2 12.0 Tf  [(\) indicate a multiline string.)] TJ ET
+BT 34.016 99.552 Td /F2 12.0 Tf  [(With our example data ready, we can begin by creating an empty RDF store:)] TJ ET
+BT 34.016 74.740 Td /F3 12.0 Tf  [(memory_store = plugin.get\('Memory', Store\)\(\))] TJ ET
+endstream
+endobj
+36 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 37 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 262.2797 730.4272 541.2797 742.3072 ]
+>>
+endobj
+37 0 obj
+<< /Type /Action
+/S /URI
+/URI (https://rdflib.readthedocs.io/en/6.1.1/intro_to_graphs.html)
+>>
+endobj
+38 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 39 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 174.3197 546.5325 455.9837 558.4125 ]
+>>
+endobj
+39 0 obj
+<< /Type /Action
+/S /URI
+/URI (https://www.w3schools.com/python/python_file_write.asp)
+>>
+endobj
+40 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 41 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 34.0157 411.9885 253.6877 423.8685 ]
+>>
+endobj
+41 0 obj
+<< /Type /Action
+/S /URI
+/URI (https://www.w3schools.com/xml/xml_rdf.asp)
+>>
+endobj
+42 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Contents 43 0 R
+>>
+endobj
+43 0 obj
+<<
+/Length 5286 >>
+stream
+
+0.000 0.000 0.000 rg
+0.000 0.000 0.800 RG
+0.6 w 0 J [  ] 0 d
+BT 34.016 784.469 Td /F2 12.0 Tf  [(Stores need a base URI to link concepts to, we'll use a fake example URI for this exercise:)] TJ ET
+BT 34.016 759.658 Td /F3 12.0 Tf  [(graph_id = URIRef\('http://example.com/foo'\))] TJ ET
+BT 34.016 733.763 Td /F2 12.0 Tf  [(Finally, and as before, we'll create an RDF graph but this time we'll use the store and id defined above:)] TJ ET
+BT 34.016 708.952 Td /F3 12.0 Tf  [(g = Graph\(store = memory_store, identifier = graph_id\))] TJ ET
+BT 34.016 683.057 Td /F2 12.0 Tf  [(If you closed it, open back up the )] TJ ET
+BT 196.988 683.057 Td /F3 12.0 Tf  [(shakespeare.n3)] TJ ET
+BT 297.788 683.057 Td /F2 12.0 Tf  [( file in a text editor. Have a look at some of the )] TJ ET
+BT 34.016 668.801 Td /F2 12.0 Tf  [(properties defined, such as )] TJ ET
+BT 164.984 668.801 Td /F3 12.0 Tf  [(married)] TJ ET
+BT 215.384 668.801 Td /F2 12.0 Tf  [( or )] TJ ET
+BT 231.380 668.801 Td /F3 12.0 Tf  [(partOf)] TJ ET
+BT 274.580 668.801 Td /F2 12.0 Tf  [(. We're going to define some new triples using these )] TJ ET
+BT 34.016 654.545 Td /F2 12.0 Tf  [(properties.)] TJ ET
+BT 34.016 628.289 Td /F2 12.0 Tf  [(What makes the Semantic Web powerful is the ability to reference and use concepts defined in )] TJ ET
+BT 491.912 628.289 Td /F2 12.0 Tf  [(other graphs)] TJ ET
+0.000 0.000 0.000 RG
+0.6 w 0 J [  ] 0 d
+491.912 625.589 m 551.564 625.589 l S
+BT 34.016 614.033 Td /F2 12.0 Tf  [(to create a web of shared meaning. This is achieved through URI namespacing.)] TJ ET
+BT 34.016 587.777 Td /F2 12.0 Tf  [(RDFlib predefines the RDF and RDFS namespaces, but we're going to add two more from the )] TJ ET
+BT 34.016 573.521 Td /F3 12.0 Tf  [(shakespeare.n3)] TJ ET
+BT 134.816 573.521 Td /F2 12.0 Tf  [( file:)] TJ ET
+BT 34.016 548.710 Td /F3 12.0 Tf  [(nslit = Namespace\('http://www.workingontologist.org/Examples/Chapter3/shakespeare.owl#'\))] TJ ET
+BT 34.016 536.259 Td /F3 12.0 Tf  [(nsbio = Namespace\('http://www.workingontologist.org/Examples/Chapter3/biography.owl#'\))] TJ ET
+BT 34.016 523.809 Td /F3 12.0 Tf  [(g.bind\('lit',nslit\))] TJ ET
+BT 34.016 511.359 Td /F3 12.0 Tf  [(g.bind\('bio', nsbio\))] TJ ET
+BT 34.016 485.464 Td /F2 12.0 Tf  [(These namespaces correspond to the following namespaces defined in )] TJ ET
+BT 373.604 485.464 Td /F3 12.0 Tf  [(shakespeare.n3)] TJ ET
+BT 474.404 485.464 Td /F2 12.0 Tf  [(:)] TJ ET
+BT 34.016 460.653 Td /F3 12.0 Tf  [(@prefix lit:     <http://www.workingontologist.org/Examples/Chapter3/shakespeare.owl#> .)] TJ ET
+BT 34.016 448.202 Td /F3 12.0 Tf  [(@prefix bio:     <http://www.workingontologist.org/Examples/Chapter3/biography.owl#> .)] TJ ET
+BT 34.016 422.308 Td /F2 12.0 Tf  [(We can check al the bound prefixes in our current graph with another )] TJ ET
+BT 370.256 422.308 Td /F3 12.0 Tf  [(for)] TJ ET
+BT 391.856 422.308 Td /F2 12.0 Tf  [( loop:)] TJ ET
+BT 34.016 397.496 Td /F3 12.0 Tf  [(for \(p, n\) in g.namespaces\(\):)] TJ ET
+BT 34.016 385.046 Td /F3 12.0 Tf  [(  print\("Prefix: " + str\(p\) + ". Corresponds to namespace: " + str\(n\)\))] TJ ET
+BT 34.016 359.151 Td /F2 12.0 Tf  [(Now we have our namespaces defined, we can start adding new RDF triples to the graph. To do this we'll )] TJ ET
+BT 34.016 344.895 Td /F2 12.0 Tf  [(use the )] TJ ET
+BT 70.676 344.895 Td /F3 12.0 Tf  [(g.add)] TJ ET
+BT 106.676 344.895 Td /F2 12.0 Tf  [( method:)] TJ ET
+BT 34.016 320.084 Td /F3 12.0 Tf  [(g.add\( \(nsbio['Cervantes'], RDF.type, nsbio['Person']\) \))] TJ ET
+BT 34.016 307.633 Td /F3 12.0 Tf  [(g.add\( \(nsbio['Cervantes'], RDFS.label, Literal\('Viguel_de_Cervantes'\)\) \))] TJ ET
+BT 34.016 295.183 Td /F3 12.0 Tf  [(g.add\( \(URIRef\('http://example.com/bar'\), RDFS.label, Literal\('bar'\)\) \))] TJ ET
+BT 34.016 269.288 Td /F2 12.0 Tf  [(Look back at Section 2 and use another )] TJ ET
+BT 225.980 269.288 Td /F3 12.0 Tf  [(for)] TJ ET
+BT 247.580 269.288 Td /F2 12.0 Tf  [( loop to print out our new RDF triples. Then look at Section 3 )] TJ ET
+BT 34.016 255.032 Td /F2 12.0 Tf  [(and print the graph serialised in the )] TJ ET
+BT 206.324 255.032 Td /F3 12.0 Tf  [(turtle)] TJ ET
+BT 249.524 255.032 Td /F2 12.0 Tf  [( format.)] TJ ET
+BT 34.016 228.776 Td /F2 12.0 Tf  [(You might notice that some parts are neatly prefixed such as )] TJ ET
+BT 327.632 228.776 Td /F3 12.0 Tf  [(rdfs:label)] TJ ET
+BT 399.632 228.776 Td /F2 12.0 Tf  [( but )] TJ ET
+BT 34.016 214.520 Td /F3 12.0 Tf  [(<http://example.com/bar>)] TJ ET
+BT 206.816 214.520 Td /F2 12.0 Tf  [( is not. This is because of the prefix binding we did earlier.)] TJ ET
+BT 34.016 188.264 Td /F2 12.0 Tf  [(Let's bind a new prefix )] TJ ET
+BT 147.152 188.264 Td /F3 12.0 Tf  [(ex)] TJ ET
+BT 161.552 188.264 Td /F2 12.0 Tf  [( to clear up our graph:)] TJ ET
+BT 34.016 163.453 Td /F3 12.0 Tf  [(g.bind\('ex', 'http://example.com'\))] TJ ET
+BT 34.016 137.558 Td /F2 12.0 Tf  [(Printing the serialised graph again we can see )] TJ ET
+BT 255.968 137.558 Td /F3 12.0 Tf  [(bar)] TJ ET
+BT 277.568 137.558 Td /F2 12.0 Tf  [( is now properly abbreviated.)] TJ ET
+BT 34.016 112.747 Td /F3 12.0 Tf  [(print\(g.serialize\(format = 'turtle'\).decode\('utf-8'\)\))] TJ ET
+BT 34.016 86.852 Td /F2 12.0 Tf  [(Similarly, printing the namespaces again confirms a new namespace has been added.)] TJ ET
+endstream
+endobj
+44 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Annots [ 46 0 R ]
+/Contents 45 0 R
+>>
+endobj
+45 0 obj
+<<
+/Length 5081 >>
+stream
+
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+0.6 w 0 J [  ] 0 d
+BT 34.016 785.914 Td /F3 12.0 Tf  [(for \(p, n\) in g.namespaces\(\):)] TJ ET
+BT 34.016 773.464 Td /F3 12.0 Tf  [(  print\("Prefix: " + str\(p\) + ". Corresponds to namespace: " + str\(n\)\))] TJ ET
+BT 34.016 747.569 Td /F2 12.0 Tf  [(Now we're going to take the xml data we prepared at the start of this step and add it to our RDF graph.)] TJ ET
+BT 34.016 721.313 Td /F2 12.0 Tf  [(Begin by printing the number of triples currently in the graph using the )] TJ ET
+BT 378.320 721.313 Td /F3 12.0 Tf  [(len)] TJ ET
+BT 399.920 721.313 Td /F2 12.0 Tf  [( function:)] TJ ET
+BT 34.016 696.502 Td /F3 12.0 Tf  [(print\('Number of triples in the graph: %i' %len\(g\)\))] TJ ET
+BT 34.016 670.607 Td /F2 12.0 Tf  [(The above print looks a bit different to what we've done previously. This is known as string interpolation, )] TJ ET
+BT 34.016 656.351 Td /F2 12.0 Tf  [(the result of )] TJ ET
+BT 94.340 656.351 Td /F3 12.0 Tf  [(len\(g\))] TJ ET
+BT 137.540 656.351 Td /F2 12.0 Tf  [( is automatically converted to a string and inserted where )] TJ ET
+BT 414.824 656.351 Td /F3 12.0 Tf  [(%i)] TJ ET
+BT 429.224 656.351 Td /F2 12.0 Tf  [( is in the string.)] TJ ET
+BT 34.016 630.095 Td /F2 12.0 Tf  [(We should have 3 triples in the graph.)] TJ ET
+BT 34.016 603.839 Td /F2 12.0 Tf  [(Now, parse the xml data and store it in our RDF graph:)] TJ ET
+BT 34.016 579.027 Td /F3 12.0 Tf  [(g.parse\(data = rdf_xml_data, format = 'application/rdf+xml'\))] TJ ET
+BT 34.016 553.132 Td /F2 12.0 Tf  [(We can confirm the xml data was properly parsed by checking the number of triples now in the graph. We )] TJ ET
+BT 34.016 538.876 Td /F2 12.0 Tf  [(should now have 13 triples.)] TJ ET
+BT 34.016 512.620 Td /F2 12.0 Tf  [(The )] TJ ET
+BT 55.676 512.620 Td /F3 12.0 Tf  [(g.objects)] TJ ET
+BT 120.476 512.620 Td /F2 12.0 Tf  [( method allows us to query the graph and receive all objects that match the supplied )] TJ ET
+BT 34.016 498.364 Td /F2 12.0 Tf  [(subject and/or predicate. You can read about this method \(and others\) here: )] TJ ET
+0.000 0.000 0.800 rg
+BT 34.016 484.108 Td /F2 12.0 Tf  [(https://rdflib.readthedocs.io/en/4.2.2/intro_to_graphs.html)] TJ ET
+0.000 0.000 0.800 RG
+0.6 w 0 J [  ] 0 d
+34.016 481.408 m 313.016 481.408 l S
+0.000 0.000 0.000 rg
+BT 34.016 457.852 Td /F2 12.0 Tf  [(Let's use it to print all music artists in our graph:)] TJ ET
+BT 34.016 433.041 Td /F3 12.0 Tf  [(artists = g.objects\(subject = None, predicate = URIRef\('http://www.recshop.fake/cd#artist'\)\))] TJ ET
+BT 34.016 420.591 Td /F3 12.0 Tf  [(for artist in artists:)] TJ ET
+BT 34.016 408.141 Td /F3 12.0 Tf  [(    print\(artist\))] TJ ET
+BT 34.016 382.246 Td /F2 12.0 Tf  [(Use everything you've learned so far to add some new data to the graph by creating a new CD and artist. )] TJ ET
+BT 34.016 367.990 Td /F2 12.0 Tf  [(Experiment with the )] TJ ET
+BT 135.008 367.990 Td /F3 12.0 Tf  [(g.subjects)] TJ ET
+BT 207.008 367.990 Td /F2 12.0 Tf  [(, )] TJ ET
+BT 213.008 367.990 Td /F3 12.0 Tf  [(g.objects)] TJ ET
+BT 277.808 367.990 Td /F2 12.0 Tf  [(, and )] TJ ET
+BT 304.136 367.990 Td /F3 12.0 Tf  [(g.predicates)] TJ ET
+BT 390.536 367.990 Td /F2 12.0 Tf  [( methods to get familiar with how )] TJ ET
+BT 34.016 353.734 Td /F2 12.0 Tf  [(to query the graph.)] TJ ET
+BT 34.016 318.835 Td /F1 18.0 Tf  [(5. Visualising RDF Graphs)] TJ ET
+BT 34.016 288.214 Td /F2 12.0 Tf  [(There are a number of websites that allow us to visualise our graphs so we don't have to simply read plain )] TJ ET
+BT 34.016 273.958 Td /F2 12.0 Tf  [(text. These websites use a )] TJ ET
+BT 161.324 273.958 Td /F3 12.0 Tf  [(.dot)] TJ ET
+BT 190.124 273.958 Td /F2 12.0 Tf  [( file containing the tuples to produce the visualisation, so we will need to )] TJ ET
+BT 34.016 259.702 Td /F2 12.0 Tf  [(write a python function to convert our graph to this format.)] TJ ET
+BT 34.016 234.890 Td /F3 12.0 Tf  [(def triplesToDot \(triples, filename, nsdict\):)] TJ ET
+BT 34.016 222.440 Td /F3 12.0 Tf  [(  out = open\(filename, 'w'\))] TJ ET
+BT 34.016 209.990 Td /F3 12.0 Tf  [(  out.write\('graph "SimpleGraph" {\\n'\))] TJ ET
+BT 34.016 197.540 Td /F3 12.0 Tf  [(  out.write\('overlap = "scale";\\n'\))] TJ ET
+BT 34.016 185.089 Td /F3 12.0 Tf  [(  for t in triples:)] TJ ET
+BT 34.016 172.639 Td /F3 12.0 Tf  [(    s = '"%s" -- "%s " [label="%s"] ;\\n' % \(t[0].encode\('utf-8'\), t[2].encode\('utf-8'\), t[1].encode\('utf-8'\)\))] TJ ET
+BT 34.016 160.189 Td /F3 12.0 Tf  [(    for item in nsdict:)] TJ ET
+BT 34.016 147.739 Td /F3 12.0 Tf  [(      s = s.replace\(item, nsdict[item]\))] TJ ET
+BT 34.016 135.288 Td /F3 12.0 Tf  [(    out.write\(s\))] TJ ET
+BT 34.016 122.838 Td /F3 12.0 Tf  [(  out.write\('}'\))] TJ ET
+BT 34.016 96.943 Td /F2 12.0 Tf  [(Don't worry if you don't quite understand what's happening here, as you become more familiar with python )] TJ ET
+BT 34.016 82.687 Td /F2 12.0 Tf  [(it will be clearer.)] TJ ET
+BT 34.016 56.431 Td /F2 12.0 Tf  [(Next we're going to create a python dictionary of all the namespaces in our graph, a dictionary is a collection )] TJ ET
+endstream
+endobj
+46 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 47 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 34.0157 483.0285 313.0157 494.9085 ]
+>>
+endobj
+47 0 obj
+<< /Type /Action
+/S /URI
+/URI (https://rdflib.readthedocs.io/en/4.2.2/intro_to_graphs.html)
+>>
+endobj
+48 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Annots [ 50 0 R 52 0 R 54 0 R 56 0 R ]
+/Contents 49 0 R
+>>
+endobj
+49 0 obj
+<<
+/Length 3553 >>
+stream
+
+0.000 0.000 0.000 rg
+0.000 0.000 0.800 RG
+0.6 w 0 J [  ] 0 d
+BT 34.016 796.469 Td /F2 12.0 Tf  [(of key/value pairs.)] TJ ET
+BT 34.016 771.658 Td /F3 12.0 Tf  [(namespaces = {})] TJ ET
+BT 34.016 759.208 Td /F3 12.0 Tf  [(for \(p, n\) in g.namespaces\(\):)] TJ ET
+BT 34.016 746.758 Td /F3 12.0 Tf  [(  print\(n, p + ':'\))] TJ ET
+BT 34.016 734.307 Td /F3 12.0 Tf  [(  namespaces[n] = p + ':')] TJ ET
+BT 34.016 708.412 Td /F2 12.0 Tf  [(Finally we'll call the )] TJ ET
+BT 134.840 708.412 Td /F3 12.0 Tf  [(triplesToDot)] TJ ET
+BT 221.240 708.412 Td /F2 12.0 Tf  [( function to create a )] TJ ET
+BT 319.544 708.412 Td /F3 12.0 Tf  [(.dot)] TJ ET
+BT 348.344 708.412 Td /F2 12.0 Tf  [( file from our graph:)] TJ ET
+BT 34.016 683.601 Td /F3 12.0 Tf  [(triplesToDot\(g, 'week-3.dot', namespaces\))] TJ ET
+BT 34.016 657.706 Td /F2 12.0 Tf  [(Open )] TJ ET
+BT 63.008 657.706 Td /F3 12.0 Tf  [(week-3.dot)] TJ ET
+BT 135.008 657.706 Td /F2 12.0 Tf  [( in a text editor, copy the text and paste it in one of these websites: - )] TJ ET
+0.000 0.000 0.800 rg
+BT 34.016 643.450 Td /F2 12.0 Tf  [(http://www.webgraphviz.com/)] TJ ET
+0.6 w 0 J [  ] 0 d
+34.016 640.750 m 180.668 640.750 l S
+0.000 0.000 0.000 rg
+BT 180.668 643.450 Td /F2 12.0 Tf  [( - )] TJ ET
+0.000 0.000 0.800 rg
+BT 190.664 643.450 Td /F2 12.0 Tf  [(http://viz-js.com/)] TJ ET
+0.6 w 0 J [  ] 0 d
+190.664 640.750 m 273.008 640.750 l S
+0.000 0.000 0.000 rg
+BT 273.008 643.450 Td /F2 12.0 Tf  [( - )] TJ ET
+0.000 0.000 0.800 rg
+BT 283.004 643.450 Td /F2 12.0 Tf  [(https://dreampuf.github.io/GraphvizOnline/)] TJ ET
+0.6 w 0 J [  ] 0 d
+283.004 640.750 m 492.332 640.750 l S
+0.000 0.000 0.000 rg
+BT 34.016 617.194 Td /F2 12.0 Tf  [(These tools can be handy to get a clearer idea of what is happening when you change a graph. Continue )] TJ ET
+BT 34.016 602.938 Td /F2 12.0 Tf  [(using what you've learned today to manipulate your RDF graph in python. Use the )] TJ ET
+BT 433.136 602.938 Td /F3 12.0 Tf  [(triplesToDot)] TJ ET
+BT 34.016 588.682 Td /F2 12.0 Tf  [(function to visualise the changes you're making.)] TJ ET
+BT 34.016 553.784 Td /F1 18.0 Tf  [(6. Extra Practice)] TJ ET
+BT 34.016 523.162 Td /F2 12.0 Tf  [(When you are finished, head on over to the RDFlib documentation here: )] TJ ET
+0.000 0.000 0.800 rg
+BT 34.016 508.906 Td /F2 12.0 Tf  [(https://rdflib.readthedocs.io/en/6.1.1/)] TJ ET
+0.6 w 0 J [  ] 0 d
+34.016 506.206 m 212.012 506.206 l S
+0.000 0.000 0.000 rg
+BT 212.012 508.906 Td /F2 12.0 Tf  [(. Tasks under the )] TJ ET
+BT 296.996 508.906 Td /F1 12.0 Tf  [(Getting started)] TJ ET
+BT 374.648 508.906 Td /F2 12.0 Tf  [( heading cover the same material that )] TJ ET
+BT 34.016 494.650 Td /F2 12.0 Tf  [(we have covered today, so checking there is a good place if you're stuck or unclear of anything. To get a )] TJ ET
+BT 34.016 480.394 Td /F2 12.0 Tf  [(deeper understanding of how RDFlib works, check out some of the links under the )] TJ ET
+BT 433.628 480.394 Td /F1 12.0 Tf  [(In depth)] TJ ET
+BT 477.308 480.394 Td /F2 12.0 Tf  [( heading.)] TJ ET
+BT 34.016 454.138 Td /F2 12.0 Tf  [(For an even more detailed resource, the O'Reilly book )] TJ ET
+BT 296.792 454.138 Td /F2 12.0 Tf  [(")] TJ ET
+BT 301.688 454.138 Td /F2 12.0 Tf  [(Programming the Semantic Web)] TJ ET
+BT 458.672 454.138 Td /F2 12.0 Tf  [(")] TJ ET
+BT 463.568 454.138 Td /F2 12.0 Tf  [( covers much of the )] TJ ET
+BT 34.016 439.882 Td /F2 12.0 Tf  [(material we will cover both in the labs and lectures and would serve as a useful reference throughout the )] TJ ET
+BT 34.016 425.626 Td /F2 12.0 Tf  [(module.)] TJ ET
+endstream
+endobj
+50 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 51 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 34.0157 642.3703 180.6677 654.2503 ]
+>>
+endobj
+51 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://www.webgraphviz.com/)
+>>
+endobj
+52 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 53 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 190.6637 642.3703 273.0077 654.2503 ]
+>>
+endobj
+53 0 obj
+<< /Type /Action
+/S /URI
+/URI (http://viz-js.com/)
+>>
+endobj
+54 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 55 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 283.0037 642.3703 492.3317 654.2503 ]
+>>
+endobj
+55 0 obj
+<< /Type /Action
+/S /URI
+/URI (https://dreampuf.github.io/GraphvizOnline/)
+>>
+endobj
+56 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 57 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 34.0157 507.8263 212.0117 519.7063 ]
+>>
+endobj
+57 0 obj
+<< /Type /Action
+/S /URI
+/URI (https://rdflib.readthedocs.io/en/6.1.1/)
+>>
+endobj
+xref
+0 58
+0000000000 65535 f 
+0000000009 00000 n 
+0000000074 00000 n 
+0000000120 00000 n 
+0000000341 00000 n 
+0000000370 00000 n 
+0000000484 00000 n 
+0000000615 00000 n 
+0000005788 00000 n 
+0000005896 00000 n 
+0000006005 00000 n 
+0000006111 00000 n 
+0000006238 00000 n 
+0000006327 00000 n 
+0000006455 00000 n 
+0000006546 00000 n 
+0000006674 00000 n 
+0000006758 00000 n 
+0000006885 00000 n 
+0000006969 00000 n 
+0000007097 00000 n 
+0000007174 00000 n 
+0000007302 00000 n 
+0000007374 00000 n 
+0000007502 00000 n 
+0000007633 00000 n 
+0000007760 00000 n 
+0000007891 00000 n 
+0000007982 00000 n 
+0000013397 00000 n 
+0000013508 00000 n 
+0000013636 00000 n 
+0000013769 00000 n 
+0000013896 00000 n 
+0000014011 00000 n 
+0000014109 00000 n 
+0000019560 00000 n 
+0000019688 00000 n 
+0000019799 00000 n 
+0000019927 00000 n 
+0000020033 00000 n 
+0000020160 00000 n 
+0000020253 00000 n 
+0000020318 00000 n 
+0000025657 00000 n 
+0000025741 00000 n 
+0000030875 00000 n 
+0000031002 00000 n 
+0000031113 00000 n 
+0000031218 00000 n 
+0000034824 00000 n 
+0000034951 00000 n 
+0000035030 00000 n 
+0000035158 00000 n 
+0000035228 00000 n 
+0000035356 00000 n 
+0000035450 00000 n 
+0000035577 00000 n 
+trailer
+<<
+/Size 58
+/Root 1 0 R
+/Info 5 0 R
+>>
+startxref
+35668
+%%EOF
