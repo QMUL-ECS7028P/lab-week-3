@@ -39,7 +39,7 @@ Open the file in a text editor and identify each RDF triple; how many are there?
 Before we can run python on the ITL machines, we need to set up the python environment by entering the following in the terminal:
 
 ```
-module load python/3.6.6
+module load python/3.8
 ```
 
 This step as crucial to ensure the machines load the correct version of python and the libraries we depend on. You will have to do this every week!
@@ -48,7 +48,7 @@ If you type now `python` in the terminal you should see the following output:
 
 ```
 bash-4.2$ python
-Python 3.6.6 (default, Sep  3 2018, 15:31:46) 
+Python 3.8 (default, Sep  3 2018, 15:31:46) 
 [GCC 4.8.5 20150623 (Red Hat 4.8.5-28)] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 >>> 
